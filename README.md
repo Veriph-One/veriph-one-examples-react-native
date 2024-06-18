@@ -26,7 +26,7 @@ This project was created using [Expo](https://expo.dev) and [`create-expo-app`](
 or
 
    ```bash
-    npx expo start
+      npx expo start
    ```
 
 In the output, you'll find options to open the app in a
