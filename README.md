@@ -1,8 +1,6 @@
 # Veriph.One's React Native integration example
 
-This project was created using [Expo](https://expo.dev) and [`create-expo-app`](https://www.npmjs.com/package/create-expo-app). It contains a barebones mobile application that integrates with Veriph.One's native SDK. It showcases a phone capture flow and a v
-
-> Note: This example is currently limited to Android. iOS integration coming soon.
+This project was created using [Expo](https://expo.dev) and [`create-expo-app`](https://www.npmjs.com/package/create-expo-app). It contains a barebones mobile application that integrates with Veriph.One's native SDK to showcase a phone capture flow.
 
 ## Getting Started
 
@@ -33,11 +31,13 @@ In the output, you'll find options to open the app in a
 
 - [development build](https://docs.expo.dev/develop/development-builds/introduction/)
 - [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- Currently unsupported: [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
 
 ## Implement the SDK in your own app
 
 Ready to integrate the Veriph.One SDK into your app? Follow these steps to do so:
+
+### Android
 
 1. Go to this project's `android/app/build.gradle` and copy line 170 (`implementation("one.veriph:veriph-one-android-sdk:1.0.9")`) to your own app's Android gradle file (same path). Make sure to add this line under the `dependencies` section.
 
@@ -63,9 +63,14 @@ Ready to integrate the Veriph.One SDK into your app? Follow these steps to do so
       npm run android
    ```
 
-6. Whenever you need to start a verification: In your React code, get a reference to the Veriph.One Module by using `const { VeriphOneModule } = NativeModules;`.
+### iOS
+Coming soon...
 
-7. Create a method similar to `startVerificationWithUuid` in `app/index.tsx` to start a verification once you obtain a session UUID from your API:
+### Connecting platform code to React Native
+
+1. Whenever you need to start a verification: In your React code, get a reference to the Veriph.One Module by using `const { VeriphOneModule } = NativeModules;`.
+
+2. Create a method similar to `startVerificationWithUuid` in `app/index.tsx` to start a verification once you obtain a session UUID from your API:
    ```javascript
    const startVerificationWithUuid = (sessionUuid: string) => {
       VeriphOneModule.subscribeToVerificationEvent(
@@ -85,7 +90,7 @@ Ready to integrate the Veriph.One SDK into your app? Follow these steps to do so
    };
    ```
 
-8. Connect this method to your Start and Result endpoint calls to finish the integration.
+3. Connect this method to your Start and Result endpoint calls to finish the integration.
 
 ## Need support? Want more examples?
 
