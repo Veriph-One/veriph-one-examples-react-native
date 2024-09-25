@@ -1,0 +1,15 @@
+{
+  "originHash" : "1b86b72a91066a93e8fa454cc86d21bf5ea53319d78fe4b9c9df07e8d9cb3c7a",
+  "pins" : [
+    {
+      "identity" : "veriph-one-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Veriph-One/veriph-one-sdk-ios",
+      "state" : {
+        "revision" : "3ba093db0a3fde6f800d3f9600c342b3cfd1d2a6",
+        "version" : "1.0.9"
+      }
+    }
+  ],
+  "version" : 3
+}
