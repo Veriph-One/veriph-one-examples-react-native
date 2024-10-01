@@ -64,7 +64,17 @@ Ready to integrate the Veriph.One SDK into your app? Follow these steps to do so
    ```
 
 ### iOS
-Coming soon...
+You'll need to work in Xcode in order to make the integration. First load the project using your `/ios` folder and follow these instructions.
+where you will install our SDK via Swift Package Manager.
+
+1. Go to your Xcode project settings, select your target in the Targets section, and search for _Frameworks, Libraries, and Embedded Content_ in the General tab.
+2. Press the '+' button, click _Add other_ and then _Add Package Dependency_.
+3. Enter the package URL [https://github.com/Veriph-One/veriph-one-sdk-ios](https://github.com/Veriph-One/veriph-one-sdk-ios) in the search field.
+4. Once it loads, select your dependency rule and click the _Add Package_ button. Please refer to the [package's URL](https://github.com/Veriph-One/veriph-one-sdk-ios) for detailed information about available versions, including the latest release.
+5. In case a confirmation prompt appears, click on the _Add Package_ button again.
+6. Using this example's `ios/veriphoneexamplesreactnative/VeriphOneModule.swift` file, copy or merge the provided code with your own to set up the iOS Native Module for the Veriph.One SDK. This will enable the native code to handle method calls from the React Native application.
+7. Create an Obj-C interface for that module using `ios/veriphoneexamplesreactnative/VeriphOneModule.m` as a reference.
+8. Ensure you have a RCTBridgeModule to link the Swift and Obj-C code; your project should have a file like this project's `ios/veriphoneexamplesreactnative/veriphoneexamplesreactnative-Bridging-Header.h`. Please note that the name of the file should be `{project-name}-Bridging-Header.h`, so if you copy and paste, ensure the file name is correct by using your project's name
 
 ### Connecting platform code to React Native
 
