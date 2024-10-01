@@ -1,10 +1,3 @@
-//
-//  VeriphOneModule.m
-//  veriphoneexamplesreactnative
-//
-//  Created by Marco Garcia on 20/09/24.
-//
-
 #import <Foundation/Foundation.h>
 #import "React/RCTBridgeModule.h"
 

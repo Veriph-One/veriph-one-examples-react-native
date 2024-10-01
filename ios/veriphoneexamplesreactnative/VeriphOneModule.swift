@@ -9,20 +9,19 @@ class VeriphOneModule: NSObject {
       return true
   }
 
-  @objc
+  @objc(subscribeToVerificationEvent:sessionUuid:callback:)
   func subscribeToVerificationEvent(
       _ apiKey: String,
       sessionUuid: String,
       callback: @escaping RCTResponseSenderBlock
   ) {
-    
     guard let rootViewController = UIApplication.shared.delegate?.window??.rootViewController else {
         callback([NSNull(), "No root view controller found"])
         return
     }
 
     launchVerification(with: apiKey, sessionUuid: sessionUuid, rootViewController: rootViewController) { result in
-        callback([NSNull(), result ?? ""])
+        callback([result ?? NSNull()])
     }
   }
 
@@ -30,7 +29,6 @@ class VeriphOneModule: NSObject {
                                   sessionUuid: String,
                                   rootViewController: UIViewController,
                                   completion: @escaping (String?) -> Void) {
-    // TODO: SDK integration
     completion("Success")
   }
 }
