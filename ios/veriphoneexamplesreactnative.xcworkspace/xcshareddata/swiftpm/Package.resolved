@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Veriph-One/veriph-one-sdk-ios",
       "state" : {
-        "revision" : "3ba093db0a3fde6f800d3f9600c342b3cfd1d2a6",
-        "version" : "1.0.9"
+        "revision" : "7b7ab3c0b8f92830f514db72ecb59e3e915a951f",
+        "version" : "1.1.0"
       }
     }
   ],

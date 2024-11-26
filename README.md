@@ -39,7 +39,7 @@ Ready to integrate the Veriph.One SDK into your app? Follow these steps to do so
 
 ### Android
 
-1. Go to this project's `android/app/build.gradle` and copy line 170 (`implementation("one.veriph:veriph-one-android-sdk:1.0.9")`) to your own app's Android gradle file (same path). Make sure to add this line under the `dependencies` section.
+1. Go to this project's `android/app/build.gradle` and copy line 177 (`implementation("one.veriph:veriph-one-android-sdk:1.1.0")`) to your own app's Android gradle file (same path). Make sure to add this line under the `dependencies` section.
 
 2. Copy the file `android/app/src/main/java/one/veriph/modules/VeriphOneModule.kt` to a similar path in your project's Android java code. Your path should be something like: `android/app/src/main/java/[com]/[example]/modules/VeriphOneModule.kt`. Make sure to update line 1 (`package one.veriph.modules`) of the file to your apps package.
 
@@ -75,6 +75,9 @@ where you will install our SDK via Swift Package Manager.
 6. Using this example's `ios/veriphoneexamplesreactnative/VeriphOneModule.swift` file, copy or merge the provided code with your own to set up the iOS Native Module for the Veriph.One SDK. This will enable the native code to handle method calls from the React Native application.
 7. Create an Obj-C interface for that module using `ios/veriphoneexamplesreactnative/VeriphOneModule.m` as a reference.
 8. Ensure you have a RCTBridgeModule to link the Swift and Obj-C code; your project should have a file like this project's `ios/veriphoneexamplesreactnative/veriphoneexamplesreactnative-Bridging-Header.h`. Please note that the name of the file should be `{project-name}-Bridging-Header.h`, so if you copy and paste, ensure the file name is correct by using your project's name
+
+Notes:
+- If you run into an error while building that prints something like `❌  fatal error: module 'RCTDeprecation' in AST file...`, the error can be solved by setting `Precompiled Bridging Header` to `No` in your iOS target settings using XCode; Go to your target > `Build Settings` > `Swift Compiler - General` > set `Precompiled Bridging Header` to `No`. More info [here](https://stackoverflow.com/a/74072441).
 
 ### Connecting platform code to React Native
 
